@@ -1,0 +1,21 @@
+ 
+<div class="container">
+    <h2>Newest Prices for Each Currency</h2>
+  
+    <div >
+      <ul>
+        @for(price of prices; track prices){
+            <li>
+                <div class="price-card">
+                    <h3>{{ price.currency | uppercase }}</h3>
+                    <p><strong>Price:</strong> ${{ price.price | number:'1.2-2' }}</p>
+                    <p><strong>Date Received:</strong> {{ price.dateReceived | date:'medium' }}</p>
+                  </div>
+              </li>
+        }@empty {
+            <p>No prices available.</p>
+        }
+      </ul>
+    </div>
+  
+  </div>

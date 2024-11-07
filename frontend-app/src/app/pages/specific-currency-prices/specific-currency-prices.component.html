@@ -1,0 +1,30 @@
+
+
+    <div class="container">
+        <h2>Get Latest 10 Prices for a Specific Currency</h2>
+      
+        <div class="input-group">
+          <input 
+            type="text" 
+            [(ngModel)]="currency" 
+            placeholder="Enter currency (e.g., bitcoin)" 
+            aria-label="Currency" 
+          />
+          <button (click)="getPrices()">Fetch Prices</button>
+        </div>
+      
+        <div >
+          <ul>
+            @for(price of prices; track prices){
+                <div class="price-card">
+                    <h3>{{ currency | uppercase }} - Price</h3>
+                    <p><strong>Date:</strong> {{ price.dateReceived | date:'medium' }}</p>
+                    <p><strong>Price:</strong> ${{ price.price | number:'1.2-2' }}</p>
+                  </div>
+            }@empty {
+                <p>No prices available for this currency.</p>
+            }
+          </ul>
+        </div>
+
+      </div>
