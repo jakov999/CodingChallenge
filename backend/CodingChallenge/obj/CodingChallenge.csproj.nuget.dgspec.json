@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marko\\source\\repos\\CodingChallenge\\CodingChallenge\\CodingChallenge.csproj": {}
+    "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\CodingChallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marko\\source\\repos\\CodingChallenge\\CodingChallenge\\CodingChallenge.csproj": {
+    "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\CodingChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marko\\source\\repos\\CodingChallenge\\CodingChallenge\\CodingChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\CodingChallenge.csproj",
         "projectName": "CodingChallenge",
-        "projectPath": "C:\\Users\\Marko\\source\\repos\\CodingChallenge\\CodingChallenge\\CodingChallenge.csproj",
+        "projectPath": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\CodingChallenge.csproj",
         "packagesPath": "C:\\Users\\Marko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marko\\source\\repos\\CodingChallenge\\CodingChallenge\\obj\\",
+        "outputPath": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,6 +48,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.12.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -61,6 +65,22 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.11.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.6.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

@@ -1,4 +1,5 @@
 ﻿using CodingChallenge.Data;
+using CodingChallenge.Interfaces;
 using CodingChallenge.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,44 +11,35 @@ using System.Threading.Tasks;
 [Route("api/v1/cryptoprices")]
 public class CryptoPricesController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly ICryptoPriceService _cryptoPriceService;
 
-    public CryptoPricesController(AppDbContext context)
+    public CryptoPricesController(ICryptoPriceService cryptoPriceService)
     {
-        _context = context;
+        _cryptoPriceService = cryptoPriceService;
     }
 
     // GET: api/v1/cryptoprices
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetAllPrices()
     {
-        return await _context.CryptoPrices.ToListAsync();
+        var prices = await _cryptoPriceService.GetAllPricesAsync();
+        return Ok(prices);
     }
 
     // GET: api/v1/cryptoprices/latest
     [HttpGet("latest")]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetLatestPrices()
     {
-        var latestPrices = await _context.CryptoPrices
-            .GroupBy(p => p.Currency)
-            .Select(g => g.OrderByDescending(p => p.DateReceived).First())
-            .ToListAsync();
-
+        var latestPrices = await _cryptoPriceService.GetLatestPricesAsync();
         return Ok(latestPrices);
     }
 
     // GET: api/v1/cryptoprices/{currency}
-
     [HttpGet("{currency}")]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetPricesByCurrency(string currency)
     {
-        var prices = await _context.CryptoPrices
-            .Where(c => c.Currency.ToLower() == currency.ToLower())
-            .OrderByDescending(p => p.DateReceived)
-            .Take(10)
-            .ToListAsync();
-
-        if (!prices.Any())
+        var prices = await _cryptoPriceService.GetPricesByCurrencyAsync(currency);
+        if (prices == null || !prices.Any())
             return NotFound();
 
         return Ok(prices);

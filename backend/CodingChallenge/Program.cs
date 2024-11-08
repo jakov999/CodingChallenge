@@ -1,4 +1,6 @@
 using CodingChallenge.Data;
+using CodingChallenge.Data.Repositories;
+using CodingChallenge.Interfaces;
 using CodingChallenge.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +22,9 @@ builder.Services.AddCors(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<ICryptoPriceService, CryptoService>();
+builder.Services.AddScoped<ICryptoPriceRepository, CryptoPriceRepository>();
 var app = builder.Build();
 app.Use(async (context, next) =>
 {
