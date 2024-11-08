@@ -2,6 +2,7 @@ using CodingChallenge.Data;
 using CodingChallenge.Data.Repositories;
 using CodingChallenge.Interfaces;
 using CodingChallenge.Services;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +30,20 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate(); // Applies all pending migrations
+    for (int i = 0; i < 5; i++) // Retry up to 5 times
+    {
+        try
+        {
+            db.Database.Migrate();
+            Console.WriteLine("Database migration applied successfully.");
+            break;
+        }
+        catch (SqlException)
+        {
+            Console.WriteLine("Database connection failed. Retrying...");
+            System.Threading.Thread.Sleep(5000); // Wait 5 seconds before retry
+        }
+    }
 }
 app.Use(async (context, next) =>
 {

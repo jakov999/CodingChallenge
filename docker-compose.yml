@@ -7,7 +7,7 @@ services:
     depends_on:
       - sqlserver
     environment:
-      - ConnectionStrings__DefaultConnection:"Server=sqlserver;Database=CodingChallenge;User Id=sa;Password=YourPassword12345;TrustServerCertificate=True"
+      - ConnectionStrings__DefaultConnection:"Server=sqlserver,1433;Database=CodingChallenge;User Id=sa;Password=Str0ngPassword123!;TrustServerCertificate=True"
     networks:
       - app-network
     ports:
@@ -36,20 +36,23 @@ services:
         tag: "backend"
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=YourPassword12345  # Ensure this meets complexity requirements
-    networks:
-      - app-network
+      - MSSQL_PID=Express
+      - SA_PASSWORD=Str0ngPassword123!    # Korisničko ime
+      - MSSQL_DATABASE=CodingChallenge  # Ime baze podataka (opciono)
+      - MSSQL_INSTANCE_NAME=your_instance # Ime instance (opciono)
     ports:
-      - "1433:1433"  # Expose SQL Server's default port
+      - "1455:1433" # Ovaj port možete promeniti u zavisnosti od potreba
     volumes:
-      - sqlserver_data:/var/opt/mssql  # Persistent data volume for SQL Server
+      - sql_data:/var/opt/mssql
+  # Persistent data volume for SQL Server
 
 networks:
   app-network:
     name: codingchallenge_app-network
 
 volumes:
-  sqlserver_data:
-    name: codingchallenge_sqlserver_data
+  sql_data:
+    driver: local
