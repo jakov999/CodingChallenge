@@ -1,0 +1,55 @@
+name: codingchallenge
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/CodingChallenge/Dockerfile
+    depends_on:
+      - sqlserver
+    environment:
+      - ConnectionStrings__DefaultConnection:"Server=sqlserver;Database=CodingChallenge;User Id=sa;Password=YourPassword12345;TrustServerCertificate=True"
+    networks:
+      - app-network
+    ports:
+      - "5000:80"  # Map port 5000 to backend's port 80
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        tag: "backend"
+  frontend:
+    build:
+      context: ./frontend-app  # Relative path for frontend
+      dockerfile: Dockerfile
+    environment:
+      - VITE_BACKEND_URL=http://backend:5000/api  # Use Docker service name for backend communication
+    networks:
+      - app-network
+    ports:
+      - "3000:80"  # Map port 3000 to frontend's port 80
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        tag: "backend"
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourPassword12345  # Ensure this meets complexity requirements
+    networks:
+      - app-network
+    ports:
+      - "1433:1433"  # Expose SQL Server's default port
+    volumes:
+      - sqlserver_data:/var/opt/mssql  # Persistent data volume for SQL Server
+
+networks:
+  app-network:
+    name: codingchallenge_app-network
+
+volumes:
+  sqlserver_data:
+    name: codingchallenge_sqlserver_data

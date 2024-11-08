@@ -26,6 +26,11 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICryptoPriceService, CryptoService>();
 builder.Services.AddScoped<ICryptoPriceRepository, CryptoPriceRepository>();
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate(); // Applies all pending migrations
+}
 app.Use(async (context, next) =>
 {
     Console.WriteLine($"Request URL: {context.Request.Path}");

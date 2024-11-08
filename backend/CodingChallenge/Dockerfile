@@ -1,25 +1,23 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
+# Use the .NET SDK for building the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["CodingChallenge/CodingChallenge.csproj", "CodingChallenge/"]
-RUN dotnet restore "./CodingChallenge/CodingChallenge.csproj"
-COPY . .
-WORKDIR "/src/CodingChallenge"
-RUN dotnet build "./CodingChallenge.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./CodingChallenge.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Copy the project file and restore dependencies
+COPY backend/CodingChallenge/CodingChallenge.csproj CodingChallenge/
+RUN dotnet restore "CodingChallenge/CodingChallenge.csproj"
 
-FROM base AS final
+# Copy the rest of the application code
+COPY backend/CodingChallenge/ CodingChallenge/
+
+# Build the application
+WORKDIR /src/CodingChallenge
+RUN dotnet build "CodingChallenge.csproj" -c Release -o /app/build
+
+# Publish the application
+RUN dotnet publish "CodingChallenge.csproj" -c Release -o /app/publish --no-restore
+
+# Use the ASP.NET Core runtime image for running the application
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "CodingChallenge.dll"]
