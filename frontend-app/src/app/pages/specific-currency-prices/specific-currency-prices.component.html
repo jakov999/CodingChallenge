@@ -1,5 +1,4 @@
 
-
     <div class="container">
         <h2>Get Latest 10 Prices for a Specific Currency</h2>
       
@@ -12,7 +11,9 @@
           />
           <button (click)="getPrices()">Fetch Prices</button>
         </div>
-      
+
+        <div *ngIf="prices.length > 0">
+          <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="'bar'"> </canvas>
         <div >
           <ul>
             @for(price of prices; track prices){

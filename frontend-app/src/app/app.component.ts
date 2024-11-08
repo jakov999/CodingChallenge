@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   prices: any[] = [];
   currency: string = 'bitcoin'; // Example: Default currency to fetch prices for
-
+  title = 'frontend-app';
   constructor(private cryptoService: CryptoService) {}
 
   ngOnInit(): void {
