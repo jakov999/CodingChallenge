@@ -1,6 +1,6 @@
 ﻿using CodingChallenge.Data;
-using CodingChallenge.Interfaces;
 using CodingChallenge.Models;
+using CodingChallenge.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

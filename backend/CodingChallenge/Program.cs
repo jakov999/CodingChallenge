@@ -1,6 +1,5 @@
 using CodingChallenge.Data;
 using CodingChallenge.Data.Repositories;
-using CodingChallenge.Interfaces;
 using CodingChallenge.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -22,9 +21,8 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<ICryptoPriceService, CryptoService>();
 builder.Services.AddScoped<ICryptoPriceRepository, CryptoPriceRepository>();
+builder.Services.AddScoped<ICryptoPriceService, CryptoService>();
 builder.Services.AddHostedService<WebSocketService>();
 
 var app = builder.Build();

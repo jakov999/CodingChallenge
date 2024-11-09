@@ -1,12 +1,15 @@
-﻿using CodingChallenge.Interfaces;
-using CodingChallenge.Models;
+﻿using CodingChallenge.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodingChallenge.Data.Repositories
 {
-    public class CryptoPriceRepository : Repository<CryptoPrice>, ICryptoPriceRepository
+    public class CryptoPriceRepository : ICryptoPriceRepository
     {
-        public CryptoPriceRepository(AppDbContext context) : base(context) { }
+        private readonly AppDbContext _context;
+        public CryptoPriceRepository(AppDbContext context) {
+            _context = context;
+
+        }
 
         public async Task<IEnumerable<CryptoPrice>> GetAllPricesAsync()
         {
@@ -27,6 +30,12 @@ namespace CodingChallenge.Data.Repositories
                 .OrderByDescending(p => p.DateReceived)
                 .Take(10)
                 .ToListAsync();
+        }
+        // Implement AddCryptoPriceAsync
+        public async Task AddCryptoPriceAsync(CryptoPrice cryptoPrice)
+        {
+            await _context.CryptoPrices.AddAsync(cryptoPrice);
+            await _context.SaveChangesAsync();
         }
     }
 }

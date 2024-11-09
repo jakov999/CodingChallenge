@@ -1,28 +1,28 @@
-﻿using CodingChallenge.Interfaces;
-using CodingChallenge.Models;
+﻿using CodingChallenge.Models;
 using CodingChallenge.Services;
 using Moq;
 using NUnit.Framework;
 using FluentAssertions;
+using CodingChallenge.Data.Repositories;
 namespace CodingChallenge.Tests.Services
 {
     [TestFixture]
     public class CryptoPriceServiceTests
     {
-        private Mock<IUnitOfWork> _unitOfWorkMock;
+
         private Mock<ICryptoPriceRepository> _cryptoPriceRepositoryMock;
         private CryptoService _cryptoPriceService;
 
         [SetUp]
         public void Setup()
         {
-            _unitOfWorkMock = new Mock<IUnitOfWork>();
+            
             _cryptoPriceRepositoryMock = new Mock<ICryptoPriceRepository>();
 
             // Set up UnitOfWork to return the mock repository
-            _unitOfWorkMock.Setup(uow => uow.CryptoPriceRepository).Returns(_cryptoPriceRepositoryMock.Object);
+           
 
-            _cryptoPriceService = new CryptoService(_unitOfWorkMock.Object);
+            //_cryptoPriceService = new CryptoService();
         }
 
         [Test]
