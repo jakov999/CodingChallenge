@@ -8,8 +8,9 @@ services:
       - sqlserver
     environment:
       - ConnectionStrings__DefaultConnection:"Server=sqlserver,1433;Database=CodingChallenge;User Id=sa;Password=Str0ngPassword123!;TrustServerCertificate=True"
+      - ASPNETCORE_ENVIRONMENT=Development
     networks:
-      - app-network
+      - my_network
     ports:
       - "5000:80"  # Map port 5000 to backend's port 80
     logging:
@@ -25,7 +26,7 @@ services:
     environment:
       - VITE_BACKEND_URL=http://backend:5000/api  # Use Docker service name for backend communication
     networks:
-      - app-network
+      - my_network
     ports:
       - "3000:80"  # Map port 3000 to frontend's port 80
     logging:
@@ -47,11 +48,13 @@ services:
       - "1455:1433" # Ovaj port možete promeniti u zavisnosti od potreba
     volumes:
       - sql_data:/var/opt/mssql
+    networks:
+      - my_network
   # Persistent data volume for SQL Server
 
 networks:
-  app-network:
-    name: codingchallenge_app-network
+  my_network:
+    driver: bridge
 
 volumes:
   sql_data:

@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
+builder.WebHost.UseUrls("http://0.0.0.0:5000");
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
@@ -24,6 +25,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICryptoPriceService, CryptoService>();
 builder.Services.AddScoped<ICryptoPriceRepository, CryptoPriceRepository>();
+builder.Services.AddHostedService<WebSocketService>();
 
 var app = builder.Build();
 
@@ -47,7 +49,6 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Add WebSocketService only after migration is done
-builder.Services.AddHostedService<WebSocketService>();
 
 // Middleware setup
 app.Use(async (context, next) =>
@@ -59,10 +60,18 @@ app.Use(async (context, next) =>
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+    });
 }
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("AllowFrontend");
 app.UseAuthorization();
 app.MapControllers();
