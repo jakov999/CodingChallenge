@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\controllers\\cryptopricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,17 +53,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CodingChallenge\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Properties\\launchSettings.json",
               "RelativeToolTip": "CodingChallenge\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCMAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-09T09:17:47.575Z",
               "EditorCaption": ""
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "CodingChallenge\\Controllers\\CryptoPricesController.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Controllers\\CryptoPricesController.cs",
               "RelativeToolTip": "CodingChallenge\\Controllers\\CryptoPricesController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T09:15:42.934Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "CodingChallenge\\Data\\AppDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T08:56:13.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T08:56:13.309Z"
             },
             {
               "$type": "Document",
@@ -116,18 +115,17 @@
               "RelativeToolTip": "CodingChallenge\\Services\\WebSocketService.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAowCcAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:14:27.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:14:27.679Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Program.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Program.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Program.cs",
               "RelativeToolTip": "CodingChallenge\\Program.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAcwE4AAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T12:32:52.152Z",
               "EditorCaption": ""
@@ -142,8 +140,7 @@
               "RelativeToolTip": "CodingChallenge\\Migrations\\AppDbContextModelSnapshot.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T12:32:04.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T12:32:04.923Z"
             },
             {
               "$type": "Document",
@@ -167,8 +164,7 @@
               "RelativeToolTip": "CodingChallenge\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAACLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-08T10:50:36.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T10:50:36.07Z"
             },
             {
               "$type": "Document",
