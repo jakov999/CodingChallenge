@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms'; 
 import { CryptoService } from '../../services/crypto.service';
 import { CryptoPrice } from '../../models/crypto-price.model';
 import { CommonModule, UpperCasePipe } from '@angular/common';
@@ -25,7 +25,7 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
         label: 'Price',
         backgroundColor: 'rgba(30, 136, 229, 0.3)',
         borderColor: '#1e88e5',
-        fill: true,
+        fill: false,
         tension: 0.1,
       },
     ],

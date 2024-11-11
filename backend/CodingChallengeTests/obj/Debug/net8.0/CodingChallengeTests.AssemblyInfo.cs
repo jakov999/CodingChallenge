@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodingChallengeTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e37781d2a6d5b6c29f171b8657305756a47e662")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb3fd4887abdee9c00a018de7a6c28f8528029b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodingChallengeTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodingChallengeTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

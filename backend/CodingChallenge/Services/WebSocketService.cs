@@ -1,7 +1,14 @@
 ﻿using CodingChallenge.Models;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CodingChallenge.Services
 {
@@ -9,11 +16,12 @@ namespace CodingChallenge.Services
     {
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly ILogger<WebSocketService> _logger;
-
-        public WebSocketService(IServiceScopeFactory scopeFactory, ILogger<WebSocketService> logger)
+        private readonly IWebSocketClientFactory _clientFactory;
+        public WebSocketService(IServiceScopeFactory scopeFactory, ILogger<WebSocketService> logger, IWebSocketClientFactory clientFactory)
         {
             _scopeFactory = scopeFactory;
             _logger = logger;
+            _clientFactory = clientFactory;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -27,14 +35,14 @@ namespace CodingChallenge.Services
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                using var client = new ClientWebSocket();
+                using var client = _clientFactory.CreateClientWebSocket();
 
                 try
                 {
                     await client.ConnectAsync(new Uri("wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero"), stoppingToken);
                     retryCount = 0;
 
-                    var buffer = new byte[1024]; // Smaller buffer for each read
+                    var buffer = new byte[1024];
 
                     while (client.State == WebSocketState.Open && !stoppingToken.IsCancellationRequested)
                     {
@@ -44,7 +52,7 @@ namespace CodingChallenge.Services
                         do
                         {
                             result = await client.ReceiveAsync(new ArraySegment<byte>(buffer), stoppingToken);
-                            memoryStream.Write(buffer, 0, result.Count); // Accumulate data in memory stream
+                            memoryStream.Write(buffer, 0, result.Count);
                         }
                         while (!result.EndOfMessage && !stoppingToken.IsCancellationRequested);
 
@@ -96,5 +104,6 @@ namespace CodingChallenge.Services
                 }
             }
         }
+        
     }
 }

@@ -20,6 +20,7 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<IWebSocketClientFactory, WebSocketClientFactory>();
 builder.Services.AddScoped<ICryptoPriceRepository, CryptoPriceRepository>();
 builder.Services.AddScoped<ICryptoPriceService, CryptoService>();
 builder.Services.AddHostedService<WebSocketService>();
