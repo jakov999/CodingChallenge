@@ -371,4 +371,3 @@ C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debu
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\CodingChallenge.pdb
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\CodingChallenge.genruntimeconfig.cache
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\ref\CodingChallenge.dll
-C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\logs\app-20241111.json
