@@ -371,3 +371,11 @@ C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debu
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\CodingChallenge.pdb
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\CodingChallenge.genruntimeconfig.cache
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\ref\CodingChallenge.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.Extensions.Logging.File.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.Sinks.Async.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\Serilog.Sinks.RollingFile.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\logs\app-20241111.json

@@ -3,9 +3,12 @@ using CodingChallenge.Data.Repositories;
 using CodingChallenge.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.Extensions.Logging;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddEventLog();
+builder.Logging.AddFile("logs/app-{Date}.json", isJson: true, fileSizeLimitBytes: 30048576);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

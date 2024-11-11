@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\controllers\\cryptopricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\controllers\\cryptopricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\codingchallenge.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\codingchallenge.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
@@ -23,14 +43,6 @@
       "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\migrations\\20241107181313_createcryptopricestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAC7D3ED-104A-4117-B859-BF836BB69EBE}|CodingChallengeTests\\CodingChallengeTests.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallengetests\\services\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAC7D3ED-104A-4117-B859-BF836BB69EBE}|CodingChallengeTests\\CodingChallengeTests.csproj|solutionrelative:codingchallengetests\\services\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,14 +55,6 @@
       "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\icryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\controllers\\cryptopricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\controllers\\cryptopricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\data\\repositories\\cryptopricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\data\\repositories\\cryptopricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -97,11 +97,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "CodingChallenge.http",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\CodingChallenge.http",
               "RelativeDocumentMoniker": "CodingChallenge\\CodingChallenge.http",
@@ -114,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "20241107181313_CreateCryptoPricesTable.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Migrations\\20241107181313_CreateCryptoPricesTable.Designer.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Migrations\\20241107181313_CreateCryptoPricesTable.Designer.cs",
@@ -127,20 +127,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "WebSocketServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
               "RelativeDocumentMoniker": "CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
-              "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\Services\\WebSocketServiceTests.cs*",
-              "RelativeToolTip": "CodingChallengeTests\\Services\\WebSocketServiceTests.cs*",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAD8AAAAjAAAA",
+              "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
+              "RelativeToolTip": "CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAIBJwD8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T21:10:54.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "CryptoServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\Services\\CryptoServiceTests.cs",
               "RelativeDocumentMoniker": "CodingChallengeTests\\Services\\CryptoServiceTests.cs",
@@ -185,7 +185,8 @@
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\CodingChallengeTests.csproj",
               "RelativeToolTip": "CodingChallengeTests\\CodingChallengeTests.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-09T18:32:21.99Z"
+              "WhenOpened": "2024-11-09T18:32:21.99Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -202,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ICryptoService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\ICryptoService.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Services\\ICryptoService.cs",
@@ -215,33 +216,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "CryptoService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\CryptoService.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Services\\CryptoService.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\CryptoService.cs",
               "RelativeToolTip": "CodingChallenge\\Services\\CryptoService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T18:08:48.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CryptoPriceRepository.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Data\\Repositories\\CryptoPriceRepository.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Data\\Repositories\\CryptoPriceRepository.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Data\\Repositories\\CryptoPriceRepository.cs",
               "RelativeToolTip": "CodingChallenge\\Data\\Repositories\\CryptoPriceRepository.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wCAAAAAJAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T18:05:09.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ICryptoPriceRepository.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Data\\Repositories\\ICryptoPriceRepository.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Data\\Repositories\\ICryptoPriceRepository.cs",
@@ -254,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CodingChallenge\\Properties\\launchSettings.json",
@@ -267,20 +268,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "CryptoPricesController.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Controllers\\CryptoPricesController.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Controllers\\CryptoPricesController.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Controllers\\CryptoPricesController.cs",
               "RelativeToolTip": "CodingChallenge\\Controllers\\CryptoPricesController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowCQAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwC4AAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T09:15:42.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Data\\AppDbContext.cs",
@@ -306,33 +307,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "WebSocketService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\WebSocketService.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Services\\WebSocketService.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\WebSocketService.cs",
               "RelativeToolTip": "CodingChallenge\\Services\\WebSocketService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAIAwwB8AAAA9AAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowEgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T13:14:27.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Program.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Program.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Program.cs",
               "RelativeToolTip": "CodingChallenge\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA6AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T12:32:52.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Migrations\\AppDbContextModelSnapshot.cs",
@@ -345,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "20241107181313_CreateCryptoPricesTable.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Migrations\\20241107181313_CreateCryptoPricesTable.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Migrations\\20241107181313_CreateCryptoPricesTable.cs",
@@ -358,13 +359,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\appsettings.json",
               "RelativeDocumentMoniker": "CodingChallenge\\appsettings.json",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\appsettings.json",
               "RelativeToolTip": "CodingChallenge\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAACLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-08T10:50:36.07Z",
               "EditorCaption": ""

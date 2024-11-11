@@ -12,10 +12,11 @@ using System.Threading.Tasks;
 public class CryptoPricesController : ControllerBase
 {
     private readonly ICryptoPriceService _cryptoPriceService;
-
-    public CryptoPricesController(ICryptoPriceService cryptoPriceService)
+    private readonly ILogger<CryptoPricesController> _logger;
+    public CryptoPricesController(ICryptoPriceService cryptoPriceService, ILogger<CryptoPricesController> logger)
     {
         _cryptoPriceService = cryptoPriceService;
+        _logger = logger;
     }
 
 
@@ -23,6 +24,7 @@ public class CryptoPricesController : ControllerBase
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetAllPrices()
     {
         var prices = await _cryptoPriceService.GetAllPricesAsync();
+        _logger.LogInformation("CryptoPricesController GetAllPricesExecutedSuccessfully");
         return Ok(prices);
     }
 
@@ -31,6 +33,7 @@ public class CryptoPricesController : ControllerBase
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetLatestPrices()
     {
         var latestPrices = await _cryptoPriceService.GetLatestPricesAsync();
+        _logger.LogInformation("CryptoPricesController GetLatestPrices ExecutedSuccessfully");
         return Ok(latestPrices);
     }
 
@@ -40,8 +43,10 @@ public class CryptoPricesController : ControllerBase
     {
         var prices = await _cryptoPriceService.GetPricesByCurrencyAsync(currency);
         if (prices == null || !prices.Any())
+        {
+            _logger.LogWarning($"CryptoPricesController, {currency} has no prices available");
             return NotFound();
-
+        }
         return Ok(prices);
     }
 }
