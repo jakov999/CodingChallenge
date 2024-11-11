@@ -26,7 +26,7 @@ namespace CodingChallenge.Tests.Services
         [Test]
         public async Task GetAllPricesAsync_ReturnsListOfCryptoPrices()
         {
-            // Arrange
+            
             var mockPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 50000.0m },
@@ -34,10 +34,10 @@ namespace CodingChallenge.Tests.Services
             };
             _mockCryptoPriceRepository.Setup(repo => repo.GetAllPricesAsync()).ReturnsAsync(mockPrices);
 
-            // Act
+            
             var result = await _cryptoService.GetAllPricesAsync();
 
-            // Assert
+            
             ClassicAssert.NotNull(result);
             ClassicAssert.AreEqual(2, result.Count());
         }
@@ -45,7 +45,7 @@ namespace CodingChallenge.Tests.Services
         [Test]
         public async Task GetLatestPricesAsync_ReturnsLatestCryptoPrices()
         {
-            // Arrange
+            
             var mockLatestPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 52000.0m },
@@ -53,10 +53,10 @@ namespace CodingChallenge.Tests.Services
             };
             _mockCryptoPriceRepository.Setup(repo => repo.GetLatestPricesAsync()).ReturnsAsync(mockLatestPrices);
 
-            // Act
+            
             var result = await _cryptoService.GetLatestPricesAsync();
 
-            // Assert
+            
             ClassicAssert.NotNull(result);
             ClassicAssert.AreEqual(2, result.Count());
         }
@@ -64,7 +64,7 @@ namespace CodingChallenge.Tests.Services
         [Test]
         public async Task GetPricesByCurrencyAsync_ReturnsPricesForSpecifiedCurrency()
         {
-            // Arrange
+            
             var mockPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 52000.0m },
@@ -72,10 +72,10 @@ namespace CodingChallenge.Tests.Services
             };
             _mockCryptoPriceRepository.Setup(repo => repo.GetPricesByCurrencyAsync("BTC")).ReturnsAsync(mockPrices);
 
-            // Act
+            
             var result = await _cryptoService.GetPricesByCurrencyAsync("BTC");
 
-            // Assert
+            
             ClassicAssert.NotNull(result);
             ClassicAssert.AreEqual(2, result.Count());
         }
@@ -83,13 +83,13 @@ namespace CodingChallenge.Tests.Services
         [Test]
         public async Task AddCryptoPriceAsync_CallsRepositoryAddMethod()
         {
-            // Arrange
+            
             var newPrice = new CryptoPrice { Currency = "BTC", Price = 55000.0m };
 
-            // Act
+            
             await _cryptoService.AddCryptoPriceAsync(newPrice);
 
-            // Assert
+            
             _mockCryptoPriceRepository.Verify(repo => repo.AddCryptoPriceAsync(newPrice), Times.Once);
         }
     }

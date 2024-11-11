@@ -18,7 +18,7 @@ public class CryptoPricesController : ControllerBase
         _cryptoPriceService = cryptoPriceService;
     }
 
-    // GET: api/v1/cryptoprices
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetAllPrices()
     {
@@ -26,7 +26,7 @@ public class CryptoPricesController : ControllerBase
         return Ok(prices);
     }
 
-    // GET: api/v1/cryptoprices/latest
+
     [HttpGet("latest")]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetLatestPrices()
     {
@@ -34,7 +34,7 @@ public class CryptoPricesController : ControllerBase
         return Ok(latestPrices);
     }
 
-    // GET: api/v1/cryptoprices/{currency}
+
     [HttpGet("{currency}")]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetPricesByCurrency(string currency)
     {

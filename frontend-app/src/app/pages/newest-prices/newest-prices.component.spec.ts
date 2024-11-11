@@ -32,13 +32,10 @@ describe('NewestPricesComponent', () => {
       { currency: 'ethereum', price: 1500, dateReceived: new Date() }
     ];
 
-    // Set up the mock service to return mock data
     mockCryptoService.getLatestPrices.and.returnValue(of(mockPrices));
 
-    // Trigger the component's ngOnInit to fetch data
     component.ngOnInit();
 
-    // Check that the component's prices are set correctly
     expect(component.prices).toEqual(mockPrices);
     expect(mockCryptoService.getLatestPrices).toHaveBeenCalled();
   });

@@ -11,10 +11,11 @@
           />
           <button (click)="getPrices()">Fetch Prices</button>
         </div>
-
-        <div *ngIf="prices.length > 0">
+        @if(prices.length>0){
+        <div>
           <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="'bar'"> </canvas>
-        <div >
+        </div >
+        }
           <ul>
             @for(price of prices; track prices){
                 <div class="price-card">
@@ -26,6 +27,6 @@
                 <p>No prices available for this currency.</p>
             }
           </ul>
-        </div>
+
 
       </div>
