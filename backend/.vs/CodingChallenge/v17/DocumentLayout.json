@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAC7D3ED-104A-4117-B859-BF836BB69EBE}|CodingChallengeTests\\CodingChallengeTests.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallengetests\\services\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAC7D3ED-104A-4117-B859-BF836BB69EBE}|CodingChallengeTests\\CodingChallengeTests.csproj|solutionrelative:codingchallengetests\\services\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1613110-ABDC-4020-B1F0-823B9C8E951B}|CodingChallenge\\CodingChallenge.csproj|solutionrelative:codingchallenge\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAC7D3ED-104A-4117-B859-BF836BB69EBE}|CodingChallengeTests\\CodingChallengeTests.csproj|c:\\users\\marko\\documents\\github\\codingchallenge\\backend\\codingchallengetests\\services\\cryptoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,19 +101,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "WebSocketServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
               "RelativeDocumentMoniker": "CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
               "RelativeToolTip": "CodingChallengeTests\\Services\\WebSocketServiceTests.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAgwDgAAAAwAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAArwDcAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T10:31:13.857Z"
+              "WhenOpened": "2024-11-11T10:31:13.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -307,13 +308,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WebSocketService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\WebSocketService.cs",
               "RelativeDocumentMoniker": "CodingChallenge\\Services\\WebSocketService.cs",
               "ToolTip": "C:\\Users\\Marko\\Documents\\GitHub\\CodingChallenge\\backend\\CodingChallenge\\Services\\WebSocketService.cs",
               "RelativeToolTip": "CodingChallenge\\Services\\WebSocketService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAdAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAowFUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T13:14:27.679Z",
               "EditorCaption": ""

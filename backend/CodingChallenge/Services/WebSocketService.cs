@@ -24,6 +24,7 @@ namespace CodingChallenge.Services
             const int maxRetries = 10;
             using var scope = _scopeFactory.CreateScope();
             var cryptoService = scope.ServiceProvider.GetRequiredService<ICryptoPriceService>();
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 using var client = new ClientWebSocket();
@@ -33,22 +34,28 @@ namespace CodingChallenge.Services
                     await client.ConnectAsync(new Uri("wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero"), stoppingToken);
                     retryCount = 0;
 
-                    var buffer = new byte[1024 * 4];
+                    var buffer = new byte[1024]; // Smaller buffer for each read
 
                     while (client.State == WebSocketState.Open && !stoppingToken.IsCancellationRequested)
                     {
-                        var result = await client.ReceiveAsync(new ArraySegment<byte>(buffer), stoppingToken);
+                        using var memoryStream = new MemoryStream();
+
+                        WebSocketReceiveResult result;
+                        do
+                        {
+                            result = await client.ReceiveAsync(new ArraySegment<byte>(buffer), stoppingToken);
+                            memoryStream.Write(buffer, 0, result.Count); // Accumulate data in memory stream
+                        }
+                        while (!result.EndOfMessage && !stoppingToken.IsCancellationRequested);
 
                         if (result.MessageType == WebSocketMessageType.Text)
                         {
-                            var json = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                            var json = Encoding.UTF8.GetString(memoryStream.ToArray());
                             var priceData = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
 
                             if (priceData != null)
                             {
                                 var dateReceived = DateTime.UtcNow;
-
-
 
                                 foreach (var item in priceData)
                                 {
