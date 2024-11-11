@@ -12,12 +12,12 @@ export class CryptoService {
 
   constructor(private http: HttpClient) {}
 
-  
+  // Fetch the latest 10 prices for a specific currency
   getPricesByCurrency(currency: string): Observable<CryptoPrice[]> {
     return this.http.get<any>(`${this.apiUrl}/cryptoprices/${currency}`);
   }
 
-  
+  // Fetch the latest prices for all currencies
   getLatestPrices(): Observable<CryptoPrice[]> {
     return this.http.get<any>(`${this.apiUrl}/cryptoprices/latest`);
   }

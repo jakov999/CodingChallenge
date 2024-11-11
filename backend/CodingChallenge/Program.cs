@@ -3,22 +3,18 @@ using CodingChallenge.Data.Repositories;
 using CodingChallenge.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 var builder = WebApplication.CreateBuilder(args);
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-builder.Logging.AddEventLog();
-builder.Logging.AddFile("logs/app-{Date}.json", isJson: true, fileSizeLimitBytes: 30048576);
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+// Add services to the container.
 builder.WebHost.UseUrls("http://0.0.0.0:5000");
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
         builder => builder
-            .WithOrigins("http://localhost:4200", "http://frontend") 
+            .WithOrigins("http://localhost:4200", "http://frontend") // Allow only your Angular app
             .AllowAnyMethod()
             .AllowAnyHeader());
 });
@@ -33,7 +29,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    for (int i = 0; i < 5; i++) 
+    for (int i = 0; i < 5; i++) // Retry up to 5 times
     {
         try
         {
@@ -44,11 +40,14 @@ using (var scope = app.Services.CreateScope())
         catch (SqlException)
         {
             Console.WriteLine("Database connection failed. Retrying...");
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(5000); // Wait 5 seconds before retry
         }
     }
 }
 
+// Add WebSocketService only after migration is done
+
+// Middleware setup
 app.Use(async (context, next) =>
 {
     Console.WriteLine($"Request URL: {context.Request.Path}");
@@ -63,7 +62,13 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
     });
 }
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
+//app.UseHttpsRedirection();
 app.UseCors("AllowFrontend");
 app.UseAuthorization();
 app.MapControllers();

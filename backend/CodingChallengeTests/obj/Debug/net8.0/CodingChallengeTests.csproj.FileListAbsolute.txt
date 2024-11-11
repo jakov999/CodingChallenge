@@ -158,3 +158,4 @@ C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallengeTests\obj
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallengeTests\obj\Debug\net8.0\CodingChallengeTests.pdb
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallengeTests\obj\Debug\net8.0\CodingChallengeTests.genruntimeconfig.cache
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallengeTests\obj\Debug\net8.0\ref\CodingChallengeTests.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallengeTests\bin\Debug\net8.0\logs\app-20241111.json

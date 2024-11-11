@@ -15,8 +15,8 @@ export class NewestPricesComponent implements OnInit, OnDestroy {
   constructor(private cryptoService: CryptoService) {}
 
   ngOnInit(): void {
-    this.getLatestPrices();
-    this.setupAutoRefresh();
+    this.getLatestPrices(); // Initial fetch
+    this.setupAutoRefresh(); // Set up auto-refresh
   }
 
   getLatestPrices(): void {
@@ -31,12 +31,12 @@ export class NewestPricesComponent implements OnInit, OnDestroy {
   setupAutoRefresh(): void {
     this.intervalId = setInterval(() => {
       this.getLatestPrices();
-    }, 60000);
+    }, 60000); // Refresh every 60000 milliseconds (1 minute)
   }
 
   ngOnDestroy(): void {
     if (this.intervalId) {
-      clearInterval(this.intervalId);
+      clearInterval(this.intervalId); // Clear interval on component destroy
     }
   }
 }

@@ -12,39 +12,34 @@ using System.Threading.Tasks;
 public class CryptoPricesController : ControllerBase
 {
     private readonly ICryptoPriceService _cryptoPriceService;
-    private readonly ILogger<CryptoPricesController> _logger;
-    public CryptoPricesController(ICryptoPriceService cryptoPriceService, ILogger<CryptoPricesController> logger)
+    public CryptoPricesController(ICryptoPriceService cryptoPriceService)
     {
         _cryptoPriceService = cryptoPriceService;
-        _logger = logger;
     }
 
-
+    // GET: api/v1/cryptoprices
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetAllPrices()
     {
         var prices = await _cryptoPriceService.GetAllPricesAsync();
-        _logger.LogInformation("CryptoPricesController GetAllPricesExecutedSuccessfully");
         return Ok(prices);
     }
 
-
+    // GET: api/v1/cryptoprices/latest
     [HttpGet("latest")]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetLatestPrices()
     {
         var latestPrices = await _cryptoPriceService.GetLatestPricesAsync();
-        _logger.LogInformation("CryptoPricesController GetLatestPrices ExecutedSuccessfully");
         return Ok(latestPrices);
     }
 
-
+    // GET: api/v1/cryptoprices/{currency}
     [HttpGet("{currency}")]
     public async Task<ActionResult<IEnumerable<CryptoPrice>>> GetPricesByCurrency(string currency)
     {
         var prices = await _cryptoPriceService.GetPricesByCurrencyAsync(currency);
         if (prices == null || !prices.Any())
         {
-            _logger.LogWarning($"CryptoPricesController, {currency} has no prices available");
             return NotFound();
         }
         return Ok(prices);

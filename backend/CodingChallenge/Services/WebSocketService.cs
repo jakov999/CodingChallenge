@@ -30,7 +30,7 @@ namespace CodingChallenge.Services
                 try
                 {
                     await client.ConnectAsync(new Uri("wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero"), stoppingToken);
-                    retryCount = 0;
+                    retryCount = 0; // Reset retry count on successful connection
 
                     var buffer = new byte[1024 * 4];
 
@@ -80,7 +80,7 @@ namespace CodingChallenge.Services
                         break;
                     }
 
-                    int delaySeconds = retryCount * 10;
+                    int delaySeconds = retryCount * 10; // Exponential backoff
                     _logger.LogInformation($"Retrying in {delaySeconds} seconds...");
                     await Task.Delay(TimeSpan.FromSeconds(delaySeconds), stoppingToken);
                 }

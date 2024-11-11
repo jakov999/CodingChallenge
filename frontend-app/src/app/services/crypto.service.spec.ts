@@ -16,7 +16,7 @@ describe('CryptoService', () => {
   });
 
   afterEach(() => {
-    httpTestingController.verify(); 
+    httpTestingController.verify(); // Verifies no outstanding HTTP requests
   });
 
   it('should be created', () => {
