@@ -53,7 +53,7 @@ namespace CodingChallenge.Tests.Services
         public async Task WebSocketService_AttemptsToConnect_OnActivation()
         {
             // Arrange
-            var clientWebSocket = new Mock<ClientWebSocket>();
+            var clientWebSocket = new ClientWebSocket();
             clientWebSocket.Setup(ws => ws.ConnectAsync(It.IsAny<Uri>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.CompletedTask);
 

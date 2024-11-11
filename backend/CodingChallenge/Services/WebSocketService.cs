@@ -1,7 +1,7 @@
 ﻿using CodingChallenge.Models;
-using Newtonsoft.Json;
 using System.Net.WebSockets;
 using System.Text;
+using System.Text.Json;
 
 namespace CodingChallenge.Services
 {
@@ -22,7 +22,8 @@ namespace CodingChallenge.Services
 
             int retryCount = 0;
             const int maxRetries = 10;
-
+            using var scope = _scopeFactory.CreateScope();
+            var cryptoService = scope.ServiceProvider.GetRequiredService<ICryptoPriceService>();
             while (!stoppingToken.IsCancellationRequested)
             {
                 using var client = new ClientWebSocket();
@@ -30,7 +31,7 @@ namespace CodingChallenge.Services
                 try
                 {
                     await client.ConnectAsync(new Uri("wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero"), stoppingToken);
-                    retryCount = 0; // Reset retry count on successful connection
+                    retryCount = 0;
 
                     var buffer = new byte[1024 * 4];
 
@@ -41,14 +42,13 @@ namespace CodingChallenge.Services
                         if (result.MessageType == WebSocketMessageType.Text)
                         {
                             var json = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                            var priceData = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+                            var priceData = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
 
                             if (priceData != null)
                             {
                                 var dateReceived = DateTime.UtcNow;
 
-                                using var scope = _scopeFactory.CreateScope();
-                                var cryptoService = scope.ServiceProvider.GetRequiredService<ICryptoPriceService>();
+
 
                                 foreach (var item in priceData)
                                 {
@@ -65,6 +65,9 @@ namespace CodingChallenge.Services
                         }
                         else if (result.MessageType == WebSocketMessageType.Close)
                         {
+                            await client.CloseAsync(WebSocketCloseStatus.NormalClosure,
+                                                    "Connection closed by client",
+                                                    CancellationToken.None);
                             _logger.LogInformation("WebSocket connection closed.");
                             break;
                         }
@@ -80,7 +83,7 @@ namespace CodingChallenge.Services
                         break;
                     }
 
-                    int delaySeconds = retryCount * 10; // Exponential backoff
+                    double delaySeconds = Math.Pow(2, retryCount);
                     _logger.LogInformation($"Retrying in {delaySeconds} seconds...");
                     await Task.Delay(TimeSpan.FromSeconds(delaySeconds), stoppingToken);
                 }

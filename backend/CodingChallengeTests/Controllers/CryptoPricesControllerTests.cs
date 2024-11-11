@@ -26,7 +26,7 @@ namespace CodingChallenge.Tests.Controllers
         [Test]
         public async Task GetAllPrices_ReturnsOkResult_WithListOfCryptoPrices()
         {
-            // Arrange
+
             var mockPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 50000.0m },
@@ -34,21 +34,19 @@ namespace CodingChallenge.Tests.Controllers
             };
             _mockCryptoPriceService.Setup(service => service.GetAllPricesAsync()).ReturnsAsync(mockPrices);
 
-            // Act
             var result = await _controller.GetAllPrices();
 
-            // Assert
             var okResult = result.Result as OkObjectResult;
             ClassicAssert.IsNotNull(okResult);
             var returnValue = okResult.Value as IEnumerable<CryptoPrice>;
             ClassicAssert.IsNotNull(returnValue);
-            ClassicAssert.AreEqual(2, returnValue.Count());
+            ClassicAssert.AreEqual(mockPrices.Count(), returnValue.Count());
         }
 
         [Test]
         public async Task GetLatestPrices_ReturnsOkResult_WithLatestCryptoPrices()
         {
-            // Arrange
+
             var mockLatestPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 52000.0m },
@@ -56,21 +54,19 @@ namespace CodingChallenge.Tests.Controllers
             };
             _mockCryptoPriceService.Setup(service => service.GetLatestPricesAsync()).ReturnsAsync(mockLatestPrices);
 
-            // Act
             var result = await _controller.GetLatestPrices();
 
-            // Assert
             var okResult = result.Result as OkObjectResult;
             ClassicAssert.IsNotNull(okResult);
             var returnValue = okResult.Value as IEnumerable<CryptoPrice>;
             ClassicAssert.IsNotNull(returnValue);
-            ClassicAssert.AreEqual(2, returnValue.Count());
+            ClassicAssert.AreEqual(mockLatestPrices.Count(), returnValue.Count());
         }
 
         [Test]
         public async Task GetPricesByCurrency_ReturnsOkResult_WithPricesForGivenCurrency()
         {
-            // Arrange
+
             var mockPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 52000.0m },
@@ -78,10 +74,8 @@ namespace CodingChallenge.Tests.Controllers
             };
             _mockCryptoPriceService.Setup(service => service.GetPricesByCurrencyAsync("BTC")).ReturnsAsync(mockPrices);
 
-            // Act
             var result = await _controller.GetPricesByCurrency("BTC");
 
-            // Assert
             var okResult = result.Result as OkObjectResult;
             ClassicAssert.IsNotNull(okResult);
             var returnValue = okResult.Value as IEnumerable<CryptoPrice>;
@@ -92,13 +86,11 @@ namespace CodingChallenge.Tests.Controllers
         [Test]
         public async Task GetPricesByCurrency_ReturnsNotFound_WhenNoPricesForGivenCurrency()
         {
-            // Arrange
+
             _mockCryptoPriceService.Setup(service => service.GetPricesByCurrencyAsync("Unknown")).ReturnsAsync((IEnumerable<CryptoPrice>)null);
 
-            // Act
             var result = await _controller.GetPricesByCurrency("Unknown");
 
-            // Assert
             ClassicAssert.IsInstanceOf<NotFoundResult>(result.Result);
         }
     }

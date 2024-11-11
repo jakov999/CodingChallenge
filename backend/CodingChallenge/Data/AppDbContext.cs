@@ -12,7 +12,7 @@ namespace CodingChallenge.Data
         {
             modelBuilder.Entity<CryptoPrice>()
                 .Property(p => p.Price)
-                .HasPrecision(18, 2); // Adjust the precision and scale as needed
+                .HasPrecision(18, 2);
         }
     }
 }

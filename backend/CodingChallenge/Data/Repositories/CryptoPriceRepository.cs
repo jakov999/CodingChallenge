@@ -31,7 +31,6 @@ namespace CodingChallenge.Data.Repositories
                 .Take(10)
                 .ToListAsync();
         }
-        // Implement AddCryptoPriceAsync
         public async Task AddCryptoPriceAsync(CryptoPrice cryptoPrice)
         {
             await _context.CryptoPrices.AddAsync(cryptoPrice);

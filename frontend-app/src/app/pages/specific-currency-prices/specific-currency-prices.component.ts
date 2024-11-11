@@ -13,11 +13,11 @@ import { BaseChartDirective } from 'ng2-charts';
   standalone: true
 })
 export class SpecificCurrencyPricesComponent implements  OnDestroy {
-  currency: string = 'bitcoin'; // Default currency
+  currency: string = 'bitcoin';
   prices: CryptoPrice[] = [];
   private intervalId: any;
 
-  // Chart.js configuration
+
   public barChartData: ChartConfiguration['data'] = {
     datasets: [
       {
@@ -45,8 +45,8 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
   constructor(private cryptoService: CryptoService) {}
 
   ngOnInit(): void {
-    this.getPrices(); // Initial fetch
-    this.setupAutoRefresh(); // Set up auto-refresh
+    this.getPrices();
+    this.setupAutoRefresh();
   }
 
   getPrices(): void {
@@ -54,7 +54,7 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
       this.cryptoService.getPricesByCurrency(this.currency).subscribe({
         next: (data) => {
           this.prices = data;
-          this.updateChart(); // Update the chart with new data
+          this.updateChart();
         },
         error: (error) => console.error('Error fetching prices:', error),
       });
@@ -64,10 +64,9 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
   setupAutoRefresh(): void {
     this.intervalId = setInterval(() => {
       this.getPrices();
-    }, 60000); // Refresh every minute
+    }, 60000);
   }
 
-  // Updates the chart data based on fetched prices
   private updateChart(): void {
     this.barChartData.labels = this.prices.map((price) =>
       new Date(price.dateReceived).toLocaleString()
@@ -77,7 +76,7 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
 
   ngOnDestroy(): void {
     if (this.intervalId) {
-      clearInterval(this.intervalId); // Clear interval on component destroy
+      clearInterval(this.intervalId);
     }
   }
 }
