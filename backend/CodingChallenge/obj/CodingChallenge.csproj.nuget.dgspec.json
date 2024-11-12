@@ -97,6 +97,10 @@
             "System.Net.WebSockets.Client": {
               "target": "Package",
               "version": "[4.3.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
             }
           },
           "imports": [

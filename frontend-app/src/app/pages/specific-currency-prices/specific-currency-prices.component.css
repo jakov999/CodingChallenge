@@ -66,9 +66,8 @@ ul {
   color: #666;
 }
 
-/* New class to control the bar chart size */
 .chart-container {
-  width: 300px;  /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed */
-  margin: 0 auto; /* Center the chart */
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
 }

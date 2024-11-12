@@ -1,12 +1,17 @@
 ﻿using CodingChallenge.Data.Repositories;
 using CodingChallenge.Models;
 using CodingChallenge.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
+using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace CodingChallenge.Tests.Services
 {
@@ -26,7 +31,7 @@ namespace CodingChallenge.Tests.Services
         [Test]
         public async Task GetAllPricesAsync_ReturnsListOfCryptoPrices()
         {
-            // Arrange
+
             var mockPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 50000.0m },
@@ -34,10 +39,8 @@ namespace CodingChallenge.Tests.Services
             };
             _mockCryptoPriceRepository.Setup(repo => repo.GetAllPricesAsync()).ReturnsAsync(mockPrices);
 
-            // Act
             var result = await _cryptoService.GetAllPricesAsync();
 
-            // Assert
             ClassicAssert.NotNull(result);
             ClassicAssert.AreEqual(2, result.Count());
         }
@@ -45,7 +48,7 @@ namespace CodingChallenge.Tests.Services
         [Test]
         public async Task GetLatestPricesAsync_ReturnsLatestCryptoPrices()
         {
-            // Arrange
+
             var mockLatestPrices = new List<CryptoPrice>
             {
                 new CryptoPrice { Currency = "BTC", Price = 52000.0m },
@@ -53,10 +56,8 @@ namespace CodingChallenge.Tests.Services
             };
             _mockCryptoPriceRepository.Setup(repo => repo.GetLatestPricesAsync()).ReturnsAsync(mockLatestPrices);
 
-            // Act
             var result = await _cryptoService.GetLatestPricesAsync();
 
-            // Assert
             ClassicAssert.NotNull(result);
             ClassicAssert.AreEqual(2, result.Count());
         }
@@ -92,5 +93,6 @@ namespace CodingChallenge.Tests.Services
             // Assert
             _mockCryptoPriceRepository.Verify(repo => repo.AddCryptoPriceAsync(newPrice), Times.Once);
         }
+        
     }
 }

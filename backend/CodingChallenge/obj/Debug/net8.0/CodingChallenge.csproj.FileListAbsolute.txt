@@ -371,3 +371,7 @@ C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debu
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\CodingChallenge.pdb
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\CodingChallenge.genruntimeconfig.cache
 C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\obj\Debug\net8.0\ref\CodingChallenge.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\xunit.core.dll
+C:\Users\Marko\Documents\GitHub\CodingChallenge\backend\CodingChallenge\bin\Debug\net8.0\xunit.execution.dotnet.dll
