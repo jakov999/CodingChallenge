@@ -7,7 +7,8 @@
             type="text" 
             [(ngModel)]="currency" 
             placeholder="Enter currency (e.g., bitcoin)" 
-            aria-label="Currency" 
+            aria-label="Currency"
+            (ngModelChange)="onCurrencyChange()"
           />
           <button (click)="getPrices()">Fetch Prices</button>
         </div>

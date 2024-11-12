@@ -48,6 +48,9 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
     this.getPrices();
     this.setupAutoRefresh();
   }
+  onCurrencyChange(): void {
+    this.getPrices();
+  }
 
   getPrices(): void {
     if (this.currency) {
@@ -68,11 +71,20 @@ export class SpecificCurrencyPricesComponent implements  OnDestroy {
   }
 
   private updateChart(): void {
-    this.barChartData.labels = this.prices.map((price) =>
-      new Date(price.dateReceived).toLocaleString()
-    );
-    this.barChartData.datasets[0].data = this.prices.map((price) => price.price);
-  }
+  this.barChartData = {
+    labels: this.prices.map((price) => new Date(price.dateReceived).toLocaleString()),
+    datasets: [
+      {
+        data: this.prices.map((price) => price.price),
+        label: 'Price',
+        backgroundColor: 'rgba(30, 136, 229, 0.3)',
+        borderColor: '#1e88e5',
+        fill: false,
+        tension: 0.1,
+      },
+    ],
+  };
+}
 
   ngOnDestroy(): void {
     if (this.intervalId) {
